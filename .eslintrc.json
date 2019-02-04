@@ -1,0 +1,21 @@
+{
+    "root": true,
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "eol-last": [
+            "error",
+            "never"
+        ],
+        "indent": [
+            "error",
+            4
+        ]
+    }
+}
