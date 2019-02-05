@@ -2,7 +2,7 @@ const search = (list, t) => {
     var arr = list.sort((a, b) => a - b);
     var length = arr.length - 1;
     return find(arr, t, 0, length);
-}
+};
 
 const find = (arr, t, l, r) => {
     var mid = Math.floor((r + l) / 2);
@@ -26,6 +26,6 @@ const find = (arr, t, l, r) => {
     if (arr[mid] < t) {
         return find(arr, t, mid + 1, r);
     }
-}
+};
 
 export default search;
