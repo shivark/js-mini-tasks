@@ -14,6 +14,6 @@ const sort = arr => {
     } while (swapped);
 
     return arr;
-}
+};
 
 export default sort;
