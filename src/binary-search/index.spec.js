@@ -1,6 +1,6 @@
 import target from './index';
 
-fdescribe('binary search', () => {
+describe('binary search', () => {
     const oddArray = [3, 4, 7, 9, 24, 64, 35, 34, 67, 45, 70]; //11
     const evenArray = [3, 4, 7, 9, 24, 64, 35, 34, 67, 45]; // 10
 

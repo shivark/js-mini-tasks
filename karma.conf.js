@@ -80,6 +80,7 @@ module.exports = config => {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+    usePolling: true
   });
 };
