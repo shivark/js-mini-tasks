@@ -1,22 +1,18 @@
 const search = (list, t) => {
     var arr = list.sort((a, b) => a - b);
-    console.log(arr);
-    var l = arr.length - 1;
-    return find(arr, t, 0, l);
+    var length = arr.length - 1;
+    return find(arr, t, 0, length);
 }
 
-const find = (arr, t, left, right) => {
-    var mid = Math.floor((right + left) / 2);
+const find = (arr, t, l, r) => {
+    var mid = Math.floor((r + l) / 2);
 
-    if (right - left <= 1) {
-        if (arr[right] == t) {
-            return right;
-        }
-        if (arr[left] == t) {
-            return left;
-        } else {
-            return -1;
-        }
+    if (r - l <= 1) {
+        return arr[r] === t
+            ? r
+            : arr[l] === t
+                ? l
+                : -1;
     }
 
     if (arr[mid] == t) {
@@ -28,7 +24,7 @@ const find = (arr, t, left, right) => {
     }
 
     if (arr[mid] < t) {
-        return find(arr, t, mid + 1, right);
+        return find(arr, t, mid + 1, r);
     }
 }
 
