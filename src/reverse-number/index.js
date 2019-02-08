@@ -18,6 +18,28 @@ const reverse1 = n => {
     return isNegative ? 0 - b : b;
 };
 
+const reverse2 = n => {
+    var isNegative = n < 0;
+    var arr = `${n}`.split('');
+
+    arr = isNegative ? arr.splice(1, arr.length) : arr;
+
+    var reversed = '';
+    while (arr.length > 0) {
+        reversed += arr.pop();
+    }
+
+    var final = isNegative ? 0 - reversed : Number(reversed)
+
+    if (final > (Math.pow(2, 31) - 1) || final < -(Math.pow(2, 31))) {
+        return 0;
+    }
+
+    return final;
+
+}
+
 export default {
-    reverse1
+    reverse1,
+    reverse2
 };
