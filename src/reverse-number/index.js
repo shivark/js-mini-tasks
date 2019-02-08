@@ -29,15 +29,14 @@ const reverse2 = n => {
         reversed += arr.pop();
     }
 
-    var final = isNegative ? 0 - reversed : Number(reversed)
+    var final = isNegative ? 0 - reversed : Number(reversed);
 
     if (final > (Math.pow(2, 31) - 1) || final < -(Math.pow(2, 31))) {
         return 0;
     }
 
     return final;
-
-}
+};
 
 export default {
     reverse1,
