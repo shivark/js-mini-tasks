@@ -11,12 +11,10 @@ describe('Two sums', () => {
             expect(result[1]).toBe(3);
         });
 
-        fit('should return array of indices of array that sum is 6', () => {
+        it('should return array of indices of array that sum is 6', () => {
             const arry = [3, 2, 4];
 
             const result = target.sum1(arry, 6);
-
-            console.log('RRRRR', result);
 
             expect(result.includes(2)).toBeTruthy();
             expect(result.includes(1)).toBeTruthy();
